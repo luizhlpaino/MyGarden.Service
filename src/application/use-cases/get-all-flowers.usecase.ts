@@ -1,6 +1,6 @@
-import { Flower } from "../../entities/flower/flower";
-import { IFlowerRepository } from "../gateways/flower.repository.interface";
 
+import { Flower } from "src/domain/entities/flower";
+import { IFlowerRepository } from "../gateways/flower.repository.interface";
 
 
 export class GetAllFlowersUseCase {

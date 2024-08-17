@@ -1,4 +1,6 @@
-import { Flower } from "../../entities/flower/flower";
+
+
+import { Flower } from "src/domain/entities/flower";
 import { IFlowerRepository } from "../gateways/flower.repository.interface";
 
 

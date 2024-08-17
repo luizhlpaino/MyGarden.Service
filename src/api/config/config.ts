@@ -1,5 +1,5 @@
 import { Express } from 'express';
-import { IFlowerRepository } from '../../domain/application/gateways/flower.repository.interface';
+import { IFlowerRepository } from '../../application/gateways/flower.repository.interface';
 
 import { FlowerMapper } from '../../infrastructure/inmemory/mappers/flower/flower.mapper';
 import { FlowerController } from '../../presentation/controllers/flower.controller';

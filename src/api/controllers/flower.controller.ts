@@ -1,7 +1,9 @@
 import { Request, Response } from "express"
-import { IFlowerInput } from "../../domain/application/dtos/inputs/flower.input";
-import { FlowerController } from "../../presentation/controllers/flower.controller";
+import { IFlowerInput } from "../../application/dtos/inputs/flower.input";
 import { APIController, APIRoute } from "../interfaces/controller.interface";
+import { FlowerController } from "src/presentation/controllers/flower.controller";
+
+
 
 export class FlowerControllerHandler implements APIController {
     private _flowerController: FlowerController;

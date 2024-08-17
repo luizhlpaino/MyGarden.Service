@@ -1,4 +1,4 @@
-import { Flower } from "../../entities/flower/flower";
+import { Flower } from "../../domain/entities/flower";
 
 
 export interface IFlowerRepository {

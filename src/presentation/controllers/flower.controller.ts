@@ -1,11 +1,11 @@
-import { IFlowerInput } from "../../domain/application/dtos/inputs/flower.input";
-import { IFlowerOutput } from "../../domain/application/dtos/outputs/flower.output";
-import { IFlowerRepository } from "../../domain/application/gateways/flower.repository.interface";
-import { GetAllFlowersUseCase } from "../../domain/application/use-cases/get-all-flowers.usecase";
-import { PlantNewFlowerUseCase } from "../../domain/application/use-cases/plant-new-flower.usecase";
-import { Flower } from "../../domain/entities/flower/flower";
-import { FlowerPresenter } from "../presenters/flower.presenter";
 
+import { GetAllFlowersUseCase } from "../../application/use-cases/get-all-flowers.usecase";
+import { PlantNewFlowerUseCase } from "../../application/use-cases/plant-new-flower.usecase";
+import { IFlowerInput } from "src/application/dtos/inputs/flower.input";
+import { IFlowerOutput } from "src/application/dtos/outputs/flower.output";
+import { IFlowerRepository } from "src/application/gateways/flower.repository.interface";
+import { FlowerPresenter } from "../presenters/flower.presenter";
+import { Flower } from "../../domain/entities/flower";
 
 export class FlowerController {
   _flowerRepository: IFlowerRepository;
@@ -28,6 +28,6 @@ export class FlowerController {
   async getAllFlowers(): Promise<Array<IFlowerOutput>> {
     const getAllFlowersUseCase = new GetAllFlowersUseCase(this._flowerRepository);
     const flowers = await getAllFlowersUseCase.handle();    
-    return await flowers.map(flower => FlowerPresenter.toFlowerOutput(flower));
+    return flowers.map(flower => FlowerPresenter.toFlowerOutput(flower));
   }
 }

@@ -1,4 +1,4 @@
-import { Flower } from "../../../../domain/entities/flower/flower";
+import { Flower } from "../../../../domain/entities/flower";
 import { FlowerEntity } from "../../entities/flower.entity";
 
 

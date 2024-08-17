@@ -1,5 +1,5 @@
-import { IFlowerRepository } from "../../../../domain/application/gateways/flower.repository.interface";
-import { Flower } from "../../../../domain/entities/flower/flower";
+import { IFlowerRepository } from "../../../../application/gateways/flower.repository.interface";
+import { Flower } from "../../../../domain/entities/flower";
 import { FlowerEntity } from "../../entities/flower.entity";
 import { FlowerMapper } from "../../mappers/flower/flower.mapper";
 
