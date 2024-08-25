@@ -22,7 +22,7 @@ export class GardenAPI {
     app.use(bodyParser.json());
 
     //routes
-    app.get('/health', (req: Request, res: Response) => {
+    app.get('/', (req: Request, res: Response) => {
       res.status(200).json({ success: true });
     });
 

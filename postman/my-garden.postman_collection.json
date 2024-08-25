@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "0df13033-a7a2-4608-8d93-b14e66f07133",
+		"name": "my-garden",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37642236"
+	},
+	"item": [
+		{
+			"name": "Flower",
+			"item": [
+				{
+					"name": "Get all flowers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_HOST}}/v1/flowers",
+							"host": [
+								"{{API_HOST}}"
+							],
+							"path": [
+								"v1",
+								"flowers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Plant new flower",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Girassol\",\r\n  \"color\": \"#FF00FF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_HOST}}/v1/flowers",
+							"host": [
+								"{{API_HOST}}"
+							],
+							"path": [
+								"v1",
+								"flowers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
