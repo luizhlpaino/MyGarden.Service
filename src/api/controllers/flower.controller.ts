@@ -26,12 +26,14 @@ export class FlowerControllerHandler implements APIController {
         ]
     }
 
-    async plantNewFlower(req: Request, res: Response): Promise<void> {
+    async plantNewFlower(req: Request, res: Response): Promise<void> {        
         const input: IFlowerInput = req.body;
+        console.log(`[POST][/v1/flowers]: Planting new flower: ${ JSON.stringify(input) }`);
         await res.status(201).send(await this._flowerController.plantNewFlower(input));
     }
 
     async getAllFlowers(req: Request, res: Response): Promise<void> {        
+        console.log(`[GET][/v1/flowers]: Searching for flowers...`);
         await res.status(200).send(await this._flowerController.getAllFlowers());
     }
 }

@@ -11,9 +11,7 @@ import { FlowerInMemoryRepository } from '../../infrastructure/inmemory/gateways
 export class APIConfig {
     private _flowerRepository: IFlowerRepository;
     private _flowerControllerHandler: FlowerControllerHandler;
-
-    private _flowerController: FlowerController;
-    
+    private _flowerController: FlowerController;    
     private _app: Express; 
     
     constructor(app: Express, dataSource: InMemoryData) {

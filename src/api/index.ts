@@ -23,6 +23,7 @@ export class GardenAPI {
 
     //routes
     app.get('/', (req: Request, res: Response) => {
+      console.log("[Health Check]");
       res.status(200).json({ success: true });
     });
 

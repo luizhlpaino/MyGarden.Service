@@ -15,5 +15,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "."    
-  }
+  },
+  "emitDecoratorMetadata": true,
+  "experimentalDecorators": true,
 }
